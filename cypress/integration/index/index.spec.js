@@ -12,6 +12,6 @@ describe('Test de prueba para clp', () =>{
         cy.contains('.label-link', 'Ya estoy registrado').click()
         cy.wait(1000)
         cy.get('#email').type('test de prueba')
-
+//probando git
     })
 })
