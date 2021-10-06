@@ -1,0 +1,29 @@
+{
+  "name": "e2e-clp",
+  "version": "1.0.0",
+  "description": "Tests automatizados para CLP",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:open" : "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoniocl11/e2e-clp.git"
+  },
+  "keywords": [
+    "e2e",
+    "automation",
+    "framework",
+    "cypress"
+  ],
+  "author": "antonio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoniocl11/e2e-clp/issues"
+  },
+  "homepage": "https://github.com/antoniocl11/e2e-clp#readme",
+  "devDependencies": {
+    "cypress": "^7.4.0"
+  }
+}
