@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "cypress:open" : "cypress open"
+    "cypress:open": "cypress open --project ./test"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/antoniocl11/e2e-clp#readme",
   "devDependencies": {
-    "cypress": "^7.4.0"
+    "cypress": "^8.6.0"
+  },
+  "dependencies": {
+    "jenkins": "^0.28.1"
   }
 }

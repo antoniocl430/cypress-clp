@@ -1,0 +1,6 @@
+{
+    "env": {
+    "baseUrl": "https://www.clpspain.es",
+    "baseUrlDev": "https://www.m2.clpspain.es"
+}
+}
