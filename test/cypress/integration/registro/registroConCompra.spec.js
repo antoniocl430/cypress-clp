@@ -66,6 +66,7 @@ describe('TP2 - Registro con Compra', ()=>{
         cy.get('.menu-4columns > .level0 > :nth-child(1)').click({force: true});
 
         cy.get('div.product-top > a > img').click({force: true, multiple:true});
+        cy.wait(2000);
         cy.get('#option-label-talla-158-item-511').click({force:true});
         cy.get('#product-addtocart-button > span').click({force: true});
         cy.wait(1000);
