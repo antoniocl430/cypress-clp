@@ -62,18 +62,29 @@ describe('TP2 - Registro con Compra', ()=>{
         //usaremos el comando de login para replicar el login para futuras pruebas
         cy.login();
 
-        //nos dirigimos a novedades
-        cy.get('.menu-4columns > .level0 > :nth-child(1)').click({force: true});
-
-        cy.get('div.product-top > a > img').click({force: true, multiple:true});
         cy.wait(2000);
-        cy.get('#option-label-talla-158-item-511').click({force:true});
+        cy.get('body > main > div > header > div.middle-header-content > div > div > div.col-md-4.col-sm-4.col-xs-auto.mobile-item-col > div > div.search-form > div.actions-search > button').click({force: true});
+
+        cy.get('#search').type('ART PRUEBA').type('{enter}');
+
+        cy.wait(2000);
+
+        cy.contains('.product-item-link', 'ART PRUEBA').click({force: true});
+
+        cy.wait(2000);
+
+        cy.get('#option-label-talla-158-item-540').click({force: true});
         cy.get('#product-addtocart-button > span').click({force: true});
         cy.wait(1000);
 
         cy.get('#cartNotificationPopup').should('be.visible');
         cy.get('.minicart-wrapper > .action').click({force: true});
-        
+        //hasta aquí llegamos al carrito
+    });
+
+    it('Eliminamos la cuenta creada mediante admin', ()=>{
+
+
     });
 
     
