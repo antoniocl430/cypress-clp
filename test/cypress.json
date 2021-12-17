@@ -3,5 +3,7 @@
     "baseUrl": "https://www.clpspain.es",
     "baseUrlDev": "https://www.m2.clpspain.es"
   },
-  "projectId": "wh4u9f"
+  "projectId": "wh4u9f",
+  "redirectionLimit": 200,
+  "defaultCommandTimeout": 10000
 }

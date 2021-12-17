@@ -35,8 +35,14 @@ Cypress.Commands.add('login', ()=>{
 
     cy.visit('https://clpspain.es/es/customer/account/login/');
 
-    cy.get('#email').click().type('democypress@test.com');
+    cy.get('#email').click().type('testcypress@test.com');
     cy.get('.form-group > .control > #pass').click().type('1234567');
 
     cy.get('.actions-toolbar > #send2 > span').click({force: true});
+});
+
+Cypress.Commands.add("restoreLocalStorageCache", () => {
+    Object.keys(LOCAL_STORAGE_MEMORY).forEach(key => {
+        localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
+    });
 });

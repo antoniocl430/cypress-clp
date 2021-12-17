@@ -4,8 +4,8 @@
   "description": "Tests automatizados para CLP",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "cypress:open": "cypress open --project ./test"
+    "cypress:open": "cypress open --project ./test",
+    "tests": "cypress run --project ./test --spec 'test/cypress/integration/testCLP.spec.js' --record --key f0571145-078a-45e9-b426-e50f96344bd8"
   },
   "repository": {
     "type": "git",
