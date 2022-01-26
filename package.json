@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/antoniocl11/e2e-clp#readme",
   "devDependencies": {
-    "cypress": "^9.2.0"
+    "cypress": "^7.6.0"
   },
   "dependencies": {
     "jenkins": "^0.28.1"
