@@ -5,5 +5,5 @@
   },
   "projectId": "wh4u9f",
   "redirectionLimit": 200,
-  "defaultCommandTimeout": 10000
+  "defaultCommandTimeout": 20000
 }

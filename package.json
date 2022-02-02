@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open --project ./test",
-    "test": "cypress run --record false --project ./test --spec 'test/cypress/integration/registroCompra.spec.js'  --key f0571145-078a-45e9-b426-e50f96344bd8"
+    "test": "cypress run --record false --project ./test --spec 'test/cypress/integration/registro/registroCompraWeb.spec.js' --key f0571145-078a-45e9-b426-e50f96344bd8",
+    "landing": "cypress run --record false --project ./test --spec 'test/cypress/integration/registro/landingAllCountries.spec.js' --key f0571145-078a-45e9-b426-e50f96344bd8"
   },
   "repository": {
     "type": "git",

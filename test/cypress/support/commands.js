@@ -41,6 +41,15 @@ Cypress.Commands.add('login', ()=>{
     cy.get('.actions-toolbar > #send2 > span').click({force: true});
 });
 
+Cypress.Commands.add('loginAdmin', () =>{
+    cy.visit('https://clpspain.es/admin_clp_admin@-@2031@_@2021/');
+
+    cy.get('#username').type('antonio');
+    cy.get('#login').type('yUw3i94~!');
+
+    cy.get('.action-login > span').click({force:true});
+});
+
 Cypress.Commands.add("restoreLocalStorageCache", () => {
     Object.keys(LOCAL_STORAGE_MEMORY).forEach(key => {
         localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
