@@ -206,7 +206,7 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.get('[data-bind="afterRender: $data.setToolbarNode"] > :nth-child(1) > .data-grid-search-control-wrap > #fulltext').clear({force: true}).type('cypress', {force: true});
         cy.get('[data-bind="afterRender: $data.setToolbarNode"] > :nth-child(1) > .data-grid-search-control-wrap > .action-submit').click({force: true});
 
-        cy.contains('._odd-row > :nth-child(3) > .data-grid-cell-content', 'Test Cypress').click({force: true});
+        cy.contains('.data-row > :nth-child(4) > .data-grid-cell-content', 'testcypress@test.com').click({force: true});
         cy.get('.col-xs-2 > .action-select-wrap > .action-select').click({force: true});
 
         cy.get('.col-xs-2 > .action-select-wrap > .action-menu-items > .action-menu > :nth-child(1) > .action-menu-item').click({force: true});
