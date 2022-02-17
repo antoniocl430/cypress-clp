@@ -9,7 +9,7 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.viewport(1366, 768);
     });
 
-    it('Registrando un usuario, sin rellenar ningún campo', ()=>{
+    it.only('Registrando un usuario, sin rellenar ningún campo', ()=>{
 
         cy.wait(2000);
         cy.get('.label-link').click({force: true});

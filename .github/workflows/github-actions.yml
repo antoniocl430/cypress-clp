@@ -15,3 +15,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "Ejecutando pruebas automaticas CLP"
+      - run: cypress run --record false --project ./test --spec 'test/cypress/integration/registro/registroCompraWeb.spec.js' --key f0571145-078a-45e9-b426-e50f96344bd8
