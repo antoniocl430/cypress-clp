@@ -18,7 +18,7 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.get('.pull-right > .block > .block-content > .actions-toolbar > .primary > .action').click({force: true});
 
         cy.wait(2000);
-        cy.get('#webform_17_submit_button').click({force: true});
+        cy.get('#webform_17_submit_button > span').click({force: true});
 
         cy.wait(3000);
         
