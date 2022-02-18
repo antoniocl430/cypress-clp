@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open --project ./test",
-    "test": "cypress run --record false --project ./test --spec 'test/cypress/integration/registro/registroCompraWeb.spec.js' --key f0571145-078a-45e9-b426-e50f96344bd8",
+    "test": "cypress run --record false --project ./test --spec 'test/cypress/integration/registro/registroCompraWeb.spec.js' --key 97fadcc4-9678-4981-94d4-2acb2f004f0d",
     "landing": "cypress run --record false --project ./test --spec 'test/cypress/integration/registro/landingAllCountries.spec.js' --key f0571145-078a-45e9-b426-e50f96344bd8"
   },
   "repository": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/antoniocl11/e2e-clp#readme",
   "devDependencies": {
-    "cypress": "^9.3.1"
+    "cypress": "^9.5.0"
   },
   "dependencies": {
     "@cypress/xvfb": "^1.2.4",
