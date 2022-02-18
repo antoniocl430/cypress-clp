@@ -4,8 +4,8 @@
 name: Pruebas Recurrentes de CLP
 
 on:
-  schedule:
-    - cron: "*/1 * * * *"
+ schedule:
+    - cron: "* * * * *"
   push:
     branches: [ main ]
   pull_request:
