@@ -9,7 +9,7 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.viewport(1366, 768);
     });
 
-    it.only('Registrando un usuario, sin rellenar ningún campo', ()=>{
+    it('Registrando un usuario, sin rellenar ningún campo', ()=>{
 
         cy.wait(2000);
         cy.get('.label-link').click({force: true});
@@ -73,20 +73,6 @@ describe('TP - Registro y login con Compra', ()=>{
 
         cy.reload();
 
-       /* cy.wait(1000);
-
-        cy.get('.action-search > .pe-7s-search').click({force: true});
-
-        cy.get('#search').type('ART PRUEBA', {force: true}).type('{enter}',{force: true});
-
-        cy.wait(2000);
-
-        cy.reload();
-
-        cy.get('#product_44441 > div > a > img').click({force: true}) //clico en el producto
-
-        cy.wait(2000);*/
-
         cy.visit('https://clpspain.es/es/art-prueba.html');
 
         cy.get('#option-label-talla-158-item-540').click({force: true});
@@ -134,20 +120,6 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.wait(1000);
 
         cy.reload();
-
-        /*cy.wait(1000);
-
-        cy.get('.action-search > .pe-7s-search').click({force: true});
-
-        cy.get('#search').type('ART PRUEBA', {force: true}).type('{enter}', {force: true});
-
-        cy.wait(2000);
-
-        cy.reload();
-
-        cy.get('#product_44441 > div > a > img').click({force: true}) //clico en el producto
-
-        cy.wait(2000);*/
 
         cy.visit('https://clpspain.es/es/art-prueba.html');
 

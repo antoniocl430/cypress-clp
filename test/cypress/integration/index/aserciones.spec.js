@@ -10,7 +10,7 @@ describe('TP - Registro y login con Compra', ()=>{
     });
 
      //comprobación de links correctos en toda la web
-     it.only('Links nav superior', () =>{
+     it('Links nav superior', () =>{
         
         //principales aserciones del nav superior
         cy.get('.label-link').should('be.visible');
@@ -27,7 +27,7 @@ describe('TP - Registro y login con Compra', ()=>{
 
     });
 
-    it('Links del menu', ()=>{
+    it.only('Links del menu', ()=>{
 
        //se comprobarán los respectivos links correctos y la paginación en cada categoría de productos
         
@@ -39,7 +39,7 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.get('#mobile-menu-6-1 > li > div.col-md-3 > ul > li:nth-child(3) > a')
             .should('have.attr', 'href', 'https://clpspain.es/es/proxima-llegada.html');
         cy.get('#mobile-menu-6-1 > li > div.col-md-3 > ul > li:nth-child(4) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/best-sellers.html');
+            .should('have.attr', 'href', 'https://clpspain.es/es/catalog/category/view/s/bestseller/id/275/');
        
        
         //menú colección PRIMAVERA/VERANO
@@ -80,7 +80,20 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.go('back');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(6) > a')
             .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/punto.html').click({force: true});
+
+        cy.request('https://clpspain.es/es/oinvierno/blazers.html').then(() =>{
+            if(cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2')){
+                console.log("Paginacion cargada correctamente");
+            }
+            else{
+                console.log("No posee paginacion");
+            }
+                
+            cy.go('back'); 
+        });
         cy.go('back');
+
+        /*
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(7) > a')
             .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/pantalon-category.html').click({force: true});
         cy.wait(4000);
@@ -129,18 +142,9 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.scrollTo('bottom');
 
         cy.wait(4000);
-        cy.request('https://clpspain.es/es/oinvierno/blazers.html').then(xhr =>{
-            if(cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2')){
-                console.log("Paginacion cargada correctamente");
-            }
-            else{
-                console.log("No posee paginacion");
-            }
-            
-            cy.go('back'); 
-        });
-        //cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        //cy.go('back'); 
+        
+        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
+        cy.go('back'); 
         
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div.col-md-6.newbottom > ul > li:nth-child(2) > a')
             .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/vestidos.html').click({force: true});
@@ -331,10 +335,10 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.get('#mobile-menu-9-1 > li > div:nth-child(2) > a')
             .should('have.attr', 'href', 'https://clpspain.es/es/denim-collection');
         cy.get('#mobile-menu-9-1 > li > div:nth-child(3) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/western');
+            .should('have.attr', 'href', 'https://clpspain.es/es/western');*/
     });
 
-    it.only('Links body page', ()=>{
+    it('Links body page', ()=>{
 
         cy.wait(2000);
         //slide principal visible y con su link correspondiente
