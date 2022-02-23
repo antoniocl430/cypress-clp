@@ -1,4 +1,4 @@
-# cypress-clp
+# test-e2e-clp
 
 Tests automatizados para CLP
 
