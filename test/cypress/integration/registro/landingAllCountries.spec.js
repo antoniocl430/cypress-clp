@@ -1,5 +1,5 @@
 'use strict'
-describe('1.1.Test landing ESPAÑA', ()=>{
+describe.only('1.1.Test landing ESPAÑA', ()=>{
 
     before(()=>{
 
@@ -65,7 +65,7 @@ describe('1.1.Test landing ESPAÑA', ()=>{
 
 });
 
-describe('1.2.Eliminar cuenta España', ()=>{
+describe.only('1.2.Eliminar cuenta España', ()=>{
 
     it('Eliminación cuenta', ()=>{
 
