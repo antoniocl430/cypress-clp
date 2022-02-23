@@ -32,6 +32,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: echo "Ejecutando pruebas automaticas en CLP"
-    - run: npm enlaces
     - run: npm shop
     - run: npm landing
