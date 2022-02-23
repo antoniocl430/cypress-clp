@@ -18,7 +18,7 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.get('.pull-right > .block > .block-content > .actions-toolbar > .primary > .action').click({force: true});
 
         cy.wait(2000);
-        cy.get('#webform_17_submit_button > span').click({force: true});
+        cy.get('#webform_17_submit_button > span:nth-child(1)').click({force: true});
 
         cy.wait(3000);
         
@@ -75,7 +75,7 @@ describe('TP - Registro y login con Compra', ()=>{
 
         cy.visit('https://clpspain.es/es/art-prueba.html');
 
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('#product-addtocart-button > span').click({force: true});
         cy.wait(1000);
 
@@ -123,7 +123,7 @@ describe('TP - Registro y login con Compra', ()=>{
 
         cy.visit('https://clpspain.es/es/art-prueba.html');
 
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('#product-addtocart-button > span').click({force: true});
         cy.wait(1000);
 
@@ -153,7 +153,6 @@ describe('TP - Registro y login con Compra', ()=>{
  
         cy.get('.confirm > .modal-inner-wrap > .modal-footer > .action-primary > span').click({force: true}); //Aceptar
  
-
         cy.wait(4000);        
 
     });

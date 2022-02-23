@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open --project ./test",
-    "test": "cypress run --record --project ./test --spec 'test/cypress/integration/registro/registroCompraWeb.spec.js' --key 97fadcc4-9678-4981-94d4-2acb2f004f0d",
+    "test": "cypress run --record --project ./test --key 97fadcc4-9678-4981-94d4-2acb2f004f0d",
+    "shop": "cypress run --record --project ./test --spec 'test/cypress/integration/registro/registroCompraWeb.spec.js'",
     "landing": "cypress run --record --project ./test --spec 'test/cypress/integration/registro/landingAllCountries.spec.js' --key 97fadcc4-9678-4981-94d4-2acb2f004f0d",
     "asertions": "cypress run --record --project ./test --spec 'test/cypress/integration/index/aserciones.spec.js' --key 97fadcc4-9678-4981-94d4-2acb2f004f0d"
   },

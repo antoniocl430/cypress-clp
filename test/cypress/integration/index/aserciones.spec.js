@@ -1,5 +1,5 @@
 'use strict'
-describe('TP - Registro y login con Compra', ()=>{
+describe('TP - Comprobación de Links', ()=>{
 
     before(()=>{
         cy.visit(Cypress.env('baseUrl'));
@@ -27,7 +27,7 @@ describe('TP - Registro y login con Compra', ()=>{
 
     });
 
-    it.only('Links del menu', ()=>{
+    it('Links del menu', ()=>{
 
        //se comprobarán los respectivos links correctos y la paginación en cada categoría de productos
         
@@ -44,290 +44,101 @@ describe('TP - Registro y login con Compra', ()=>{
        
         //menú colección PRIMAVERA/VERANO
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(1) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/chaqueta.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/chaqueta.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(2) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/vestido.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/vestido.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(3) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/monos.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/monos.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(4) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/camisa.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/camisa.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(5) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/camiseta-n.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/camiseta-n.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(6) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/punto.html').click({force: true});
-
-        cy.request('https://clpspain.es/es/oinvierno/blazers.html').then(() =>{
-            if(cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2')){
-                console.log("Paginacion cargada correctamente");
-            }
-            else{
-                console.log("No posee paginacion");
-            }
-                
-            cy.go('back'); 
-        });
-        cy.go('back');
-
-        /*
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/punto.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(7) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/pantalon-category.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/pantalon-category.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(8) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/denim.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/denim.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div.col-md-6.newbottom > ul > li:nth-child(9) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/shorts-bermudas.html').click({force: true});
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/shorts-bermudas.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div:nth-child(3) > ul > li:nth-child(1) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/falda.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/falda.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div:nth-child(3) > ul > li:nth-child(2) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/zapato.html').click({force: true});
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/zapato.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div:nth-child(3) > ul > li:nth-child(3) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/bolso-n.html').click({force: true});
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/bolso-n.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div:nth-child(3) > ul > li:nth-child(4) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/accesorios.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/accesorios.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(2) > div:nth-child(3) > ul > li:nth-child(5) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/banador-mujer.html').click({force: true});
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/primavera-verano/banador-mujer.html');
         
          //menú colección OTOÑO/INVIERNO
          cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div.col-md-6.newbottom > ul > li:nth-child(1) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/blazers.html').click({force: true});         
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-
-        cy.wait(4000);
-        
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back'); 
-        
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/blazers.html');              
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div.col-md-6.newbottom > ul > li:nth-child(2) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/vestidos.html').click({force: true});
-         cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back'); 
-
-        
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/vestidos.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div.col-md-6.newbottom > ul > li:nth-child(3) > a')
-             .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/monos.html').click({force: true});
-
-        //solo tiene una página
-        //cy.go('back'); 
+             .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/monos.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div.col-md-6.newbottom > ul > li:nth-child(4) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/camisas.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/camisas.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div.col-md-6.newbottom > ul > li:nth-child(5) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/camisetas-tops.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/camisetas-tops.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div.col-md-6.newbottom > ul > li:nth-child(6) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/punto.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/punto.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div.col-md-6.newbottom > ul > li:nth-child(7) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/pantalones.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/pantalones.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div.col-md-6.newbottom > ul > li:nth-child(8) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/jeans.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/jeans.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div.col-md-6.newbottom > ul > li:nth-child(9) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/shorts-bermudas.html').click({force: true});
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/shorts-bermudas.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div:nth-child(3) > ul > li:nth-child(1) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/faldas.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/faldas.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div:nth-child(3) > ul > li:nth-child(2) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/cazadoras-abrigos.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/cazadoras-abrigos.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div:nth-child(3) > ul > li:nth-child(3) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/zapatos.html').click({force: true});
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/zapatos.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div:nth-child(3) > ul > li:nth-child(4) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/bolsos.html').click({force: true});
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/bolsos.html');
         cy.get('#mobile-menu-7-1 > li > div:nth-child(4) > div:nth-child(3) > ul > li:nth-child(5) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/accesorios.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/accesorios.html');
         
-           
         //menú outlet DESTACADOS
         cy.get('#mobile-menu-8-1 > li > div:nth-child(1) > ul > li > h5 > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-favorito.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
-    
-       
-       
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-favorito.html');
+
         //menú outlet PRIMAVERA/VERANO
 
         cy.get('#mobile-menu-8-1 > li > div.col-md-4.separadormenuiz.movilbottom > ul > li:nth-child(1) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/camisetas-sudaderas-y-punto.html').click({force: true});
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/camisetas-sudaderas-y-punto.html');
         cy.get('#mobile-menu-8-1 > li > div.col-md-4.separadormenuiz.movilbottom > ul > li:nth-child(2) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/camisa.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/camisa.html');
         cy.get('#mobile-menu-8-1 > li > div.col-md-4.separadormenuiz.movilbottom > ul > li:nth-child(3) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/vestido.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/vestido.html');
         cy.get('#mobile-menu-8-1 > li > div.col-md-4.separadormenuiz.movilbottom > ul > li:nth-child(4) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/catalog/category/view/s/pantalon/id/79/').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/catalog/category/view/s/pantalon/id/79/');
         cy.get('#mobile-menu-8-1 > li > div.col-md-4.separadormenuiz.movilbottom > ul > li:nth-child(5) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/falda.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/falda.html');
         cy.get('#mobile-menu-8-1 > li > div.col-md-4.separadormenuiz.movilbottom > ul > li:nth-child(6) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/chaquetas-y-abrigos.html').click({force: true});
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/chaquetas-y-abrigos.html');
         cy.get('#mobile-menu-8-1 > li > div.col-md-4.separadormenuiz.movilbottom > ul > li:nth-child(7) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/zapatos.html').click({force: true});
-        cy.go('back');    
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-primavera-verano/zapatos.html'); 
         
          //mneú outlet OTOÑO/INVIERNO
         
         cy.get('#mobile-menu-8-1 > li > div:nth-child(3) > ul > li:nth-child(1) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/camisetas-sudaderas-y-punto.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/camisetas-sudaderas-y-punto.html');
         cy.get('#mobile-menu-8-1 > li > div:nth-child(3) > ul > li:nth-child(2) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/camisa.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/camisa.html');
         cy.get('#mobile-menu-8-1 > li > div:nth-child(3) > ul > li:nth-child(3) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/vestido.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/vestido.html');
         cy.get('#mobile-menu-8-1 > li > div:nth-child(3) > ul > li:nth-child(4) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/catalog/category/view/s/pantalon/id/71/').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/catalog/category/view/s/pantalon/id/71/');
         cy.get('#mobile-menu-8-1 > li > div:nth-child(3) > ul > li:nth-child(5) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/falda.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/falda.html');
         cy.get('#mobile-menu-8-1 > li > div:nth-child(3) > ul > li:nth-child(6) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/chaquetas-y-abrigos.html').click({force: true});
-        cy.go('back');
-        cy.get('#mobile-menu-8-1 > li > div:nth-child(3) > ul > li:nth-child(7) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/zapatos.html').click({force: true});
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/chaquetas-y-abrigos.html');
         cy.get('#mobile-menu-8-1 > li > div:nth-child(3) > ul > li:nth-child(8) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/accesorios.html').click({force: true});
-        cy.wait(4000);
-        cy.scrollTo('bottom');
-        cy.wait(4000);
-        cy.get('.amscroll-pages').should('have.attr', 'amscroll-page', '2');
-        cy.go('back');
+            .should('have.attr', 'href', 'https://clpspain.es/es/mujer/outlet/outlet-oto-o-invierno/accesorios.html');
         
         //menú EDITORIALES
         cy.get('#mobile-menu-9-1 > li > div:nth-child(1) > a')
@@ -335,7 +146,7 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.get('#mobile-menu-9-1 > li > div:nth-child(2) > a')
             .should('have.attr', 'href', 'https://clpspain.es/es/denim-collection');
         cy.get('#mobile-menu-9-1 > li > div:nth-child(3) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/western');*/
+            .should('have.attr', 'href', 'https://clpspain.es/es/western');
     });
 
     it('Links body page', ()=>{
@@ -343,13 +154,13 @@ describe('TP - Registro y login con Compra', ()=>{
         cy.wait(2000);
         //slide principal visible y con su link correspondiente
         cy.reload();
-        cy.get('#rev_slider_1_1 > rs-slides > rs-slide > rs-layer-wrap > rs-loop-wrap > rs-mask-wrap > rs-layer').should('be.visible')
+        cy.get('rs-layer').should('be.visible')
             .should('have.attr', 'data-actions', 'o:click;a:simplelink;target:_self;url:https://clpspain.es/es/novedades-inicio.html;');
-        
+            
         //sección lo más vendido
         cy.get('.col-lg-12 > :nth-child(1) > .col-md-3').should('be.visible');
         cy.get('#maincontent > div > div > div.section-beseller > div > div > div > div > div.panel-block-row.col-md-3 > div > a')
-            .should('be.visible').should('have.attr', 'href', 'https://clpspain.es/es/oinvierno/best-sellers.html/');
+            .should('be.visible').should('have.attr', 'href', 'https://clpspain.es/es/catalog/category/view/s/bestseller/id/275/');
     
         //imágenes lo mas vendido
         cy.get(':nth-child(1) > .product-item > .product-item-info > .product-top > .product > .img-responsive').should('be.visible');

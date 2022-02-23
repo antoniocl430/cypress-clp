@@ -38,7 +38,7 @@ describe('1.1.Test landing ESPAÑA', ()=>{
         cy.reload();
         cy.visit('https://clpspain.es/es/art-prueba.html');
         cy.wait(2000);
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('#product-addtocart-button > span').click({force: true});
         cy.wait(1000);
         cy.get('#cartNotificationPopup').should('be.visible');
@@ -136,7 +136,7 @@ describe('2.1.Test landing FRANCIA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpfrance.fr/fr/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -240,7 +240,7 @@ describe('3.1.Test landing ITALIA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpitalia.it/it/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -344,7 +344,7 @@ describe('4.1.Test landing PORTUGAL' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpportugal.pt/pt/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -448,7 +448,7 @@ describe('6.1.Test landing GRAN BRETAÑA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpbritain.co.uk/en/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -552,7 +552,7 @@ describe('7.1.Test landing ALEMANIA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpdeutschland.de/ge/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -656,7 +656,7 @@ describe('8.1.Test landing MEXICO' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpmexico.mx/mx/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -758,7 +758,7 @@ describe('9.1.Test landing PAISES BAJOS' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpworld.com/world/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -860,7 +860,7 @@ describe('10.1.Test landing NORUEGA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpworld.com/world/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -962,7 +962,7 @@ describe('11.1.Test landing SUECIA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpworld.com/world/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -1064,7 +1064,7 @@ describe('12.1.Test landing AUSTRIA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpworld.com/world/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -1166,7 +1166,7 @@ describe('13.1.Test landing CHIPRE' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpworld.com/world/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -1268,7 +1268,7 @@ describe('14.1.Test landing POLONIA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpworld.com/world/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -1370,7 +1370,7 @@ describe('15.1.Test landing REPUBLICA CHECA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpworld.com/world/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -1472,7 +1472,7 @@ describe('16.1.Test landing CROACIA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpworld.com/world/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
@@ -1575,7 +1575,7 @@ describe('17.1.Test landing GRECIA' , ()=>{
         cy.wait(1000);
         cy.reload();
         cy.visit('https://clpworld.com/world/art-prueba.html');
-        cy.get('#option-label-talla-158-item-540').click({force: true});
+        cy.get('#option-label-talla-158-item-539').click({force: true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
         cy.get('.plus').click({force:true});
