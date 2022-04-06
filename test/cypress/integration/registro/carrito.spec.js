@@ -12,8 +12,6 @@ describe('Añade constantemente productos al carrito' , ()=>{
     });
 
     it('Tienda de España', ()=>{
-        //bucle para que añada productos a la cesta cada X min, calcular X según lo que tarde el proceso
-
         cy.loginCarrito();
 
         cy.wait(4000);
