@@ -41,6 +41,16 @@ Cypress.Commands.add('login', ()=>{
     cy.get('.actions-toolbar > #send2 > span').click({force: true});
 });
 
+Cypress.Commands.add('loginCarrito', ()=>{
+
+    cy.visit('https://clpspain.es/es/customer/account/login/');
+
+    cy.get('#email').click().type('carritocypress@test.com');
+    cy.get('.form-group > .control > #pass').click().type('1234567');
+
+    cy.get('.actions-toolbar > #send2 > span').click({force: true});
+});
+
 Cypress.Commands.add('loginAdmin', () =>{
     cy.visit('https://clpspain.es/admin_clp_admin@-@2031@_@2021/');
 
