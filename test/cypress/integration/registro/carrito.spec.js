@@ -32,7 +32,7 @@ describe('Añade constantemente productos al carrito' , ()=>{
         cy.get('.minicart-wrapper > .action').click({force: true});
     
         cy.wait(2000);
-        //elimina el producto del carrito
+        
         cy.get('.action-delete').click({force: true});
     
         cy.wait(4000);
