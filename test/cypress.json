@@ -1,7 +1,13 @@
 {
   "env": {
     "baseUrl": "https://www.clpspain.es",
-    "baseUrlDev": "https://www.m2.clpspain.es"
+    "baseUrlDev": "https://www.m2.clpspain.es",
+    "baseUrlFrancia": "https://clpfrance.fr",
+    "baseUrlItalia" : "https://clpitalia.it",
+    "baseUrlPortugal": "https://clpportugal.pt",
+    "baseUrlBritain": "https://clpbritain.co.uk",
+    "baseUrlAlemania" : "https://clpdeutschland.de",
+    "baseUrlMexico": "https://clpmexico.mx"
   },
   "projectId": "wh4u9f",
   "redirectionLimit": 200,
