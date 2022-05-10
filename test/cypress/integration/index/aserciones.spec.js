@@ -34,12 +34,8 @@ describe('TP - Comprobación de Links', ()=>{
         //menú novedades
         cy.get('#mobile-menu-6-1 > li > div.col-md-3 > ul > li:nth-child(1) > a')
             .should('have.attr', 'href', 'https://clpspain.es/es/novedades-inicio.html');
-        cy.get('#mobile-menu-6-1 > li > div.col-md-3 > ul > li:nth-child(2) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/ultima-semana.html');
         cy.get('#mobile-menu-6-1 > li > div.col-md-3 > ul > li:nth-child(3) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/proxima-llegada.html');
-        cy.get('#mobile-menu-6-1 > li > div.col-md-3 > ul > li:nth-child(4) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/catalog/category/view/s/bestseller/id/275/');
+            .should('have.attr', 'href', 'https://clpspain.es/es/ultima-semana.html');
        
        
         //menú colección PRIMAVERA/VERANO
@@ -142,11 +138,11 @@ describe('TP - Comprobación de Links', ()=>{
         
         //menú EDITORIALES
         cy.get('#mobile-menu-9-1 > li > div:nth-child(1) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/news-time');
+            .should('have.attr', 'href', 'https://clpspain.es/es/spring-hall');
         cy.get('#mobile-menu-9-1 > li > div:nth-child(2) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/denim-collection');
+            .should('have.attr', 'href', 'https://clpspain.es/es/news-time');
         cy.get('#mobile-menu-9-1 > li > div:nth-child(3) > a')
-            .should('have.attr', 'href', 'https://clpspain.es/es/western');
+            .should('have.attr', 'href', 'https://clpspain.es/es/denim-collection');
     });
 
     it('Links body page', ()=>{
@@ -154,8 +150,6 @@ describe('TP - Comprobación de Links', ()=>{
         cy.wait(2000);
         //slide principal visible y con su link correspondiente
         cy.reload();
-        cy.get('rs-layer').should('be.visible')
-            .should('have.attr', 'data-actions', 'o:click;a:simplelink;target:_self;url:https://clpspain.es/es/novedades-inicio.html;');
             
         //sección lo más vendido
         cy.get('.col-lg-12 > :nth-child(1) > .col-md-3').should('be.visible');
@@ -163,17 +157,10 @@ describe('TP - Comprobación de Links', ()=>{
             .should('be.visible').should('have.attr', 'href', 'https://clpspain.es/es/catalog/category/view/s/bestseller/id/275/');
     
         //imágenes lo mas vendido
-        cy.get(':nth-child(1) > .product-item > .product-item-info > .product-top > .product > .img-responsive').should('be.visible');
-        cy.get(':nth-child(2) > .product-item > .product-item-info > .product-top > .product > .img-responsive').should('be.visible');
-        cy.get(':nth-child(3) > .product-item > .product-item-info > .product-top > .product > .img-responsive').should('be.visible');
+        cy.get('.section-beseller').should('be.visible');
 
         //imagenes novedades, f/w22 y editorial
-        cy.get('.section-category-banner > .container > :nth-child(1) > :nth-child(1) > .row > .panel-block-row > .promobanner > a')
-            .should('be.visible').should('have.attr', 'href', 'https://clpspain.es/es/novedades-inicio.html');
-        cy.get('.section-category-banner > .container > :nth-child(1) > :nth-child(2) > .row > .panel-block-row > .promobanner > a')
-            .should('be.visible').should('have.attr', 'href', 'https://clpspain.es/es/proxima-llegada.html');
-        cy.get('.section-category-banner > .container > :nth-child(1) > :nth-child(3) > .row > .panel-block-row > .promobanner > a')
-            .should('be.visible').should('have.attr', 'href', 'https://clpspain.es/es/news-time');
+        cy.get('.section-category-banner > .container').should('be.visible');
 
         //seccion pago, envios y devoluciones
         cy.get('.section-iconos').should('be.visible');
